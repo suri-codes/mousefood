@@ -19,6 +19,10 @@ embedded-graphics.workspace = true
 embedded-graphics-unicodefonts = { workspace = true, optional = true }
 weact-studio-epd = { workspace = true, optional = true }
 
+
+[patch."https://github.com/ratatui/ratatui.git"]
+ratatui = { git = "https://github.com/suri-codes/ratatui.git", branch = "main" }
+
 [dev-dependencies]
 ratatui.workspace = true
 rstest.workspace = true
@@ -31,6 +35,7 @@ fonts = ["dep:embedded-graphics-unicodefonts"]
 epd-weact = ["dep:weact-studio-epd"]
 portable-atomic = ["ratatui-core/portable-atomic"]
 framebuffer = []
+
 
 [lints]
 workspace = true
